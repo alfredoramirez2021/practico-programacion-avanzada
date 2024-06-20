@@ -189,5 +189,14 @@ Utilizamos data.drop() para eliminar la columna de consumo eléctrico de X.
 
 Dividimos los datos en conjuntos de entrenamiento y prueba usando train_test_split() de Scikit-Learn.
 
+Creamos una instancia del modelo de Regresión Lineal y lo entrenamos con los datos de entrenamiento utilizando model.fit().
+
+Hacemos predicciones sobre el conjunto de prueba y calculamos el coeficiente de determinación (R-squared) para evaluar el rendimiento del modelo.
+
+Asegúrate de reemplazar 'consumo_electrico_familias.csv' con la ruta y el nombre de tu archivo de datos. También puedes ajustar la división de 
+los datos de entrenamiento y prueba según tus necesidades.
+
+Este es un ejemplo básico, pero puedes ampliarlo y personalizarlo según tus requisitos específicos, como agregar más preprocesamiento de 
+datos, selección de variables, evaluación de modelos, etc.
 
 
