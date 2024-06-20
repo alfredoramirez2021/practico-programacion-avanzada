@@ -95,4 +95,25 @@ Contribuir a la reducción del consumo de energía y las emisiones de gases de e
 Generar ahorros económicos para los hogares al optimizar el uso de la energía eléctrica.
 ¿Qué te parece esta propuesta de investigación basada en Regresión Lineal y enfocada en utilidades para la sociedad?
 
+segundo paso generar los algoritmos necesarios para continuar con el proyecto
 
+
+Importar las librerías necesarias:
+import numpy as np
+from sklearn.linear_model import LinearRegression
+import matplotlib.pyplot as plt
+Cargar y preparar los datos:
+python
+Copiar
+# Cargar los datos desde un archivo CSV
+data = np.genfromtxt('datos_consumo_energia.csv', delimiter=',')
+
+# Separar las variables independientes (X) y la variable dependiente (y)
+X = data[:, :-1]  # Todas las columnas excepto la última
+y = data[:, -1]   # Última columna (consumo de energía)
+Dividir los datos en conjuntos de entrenamiento y prueba:
+python
+Copiar
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+Entrenar el modelo de Regresión Lineal:
