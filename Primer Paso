@@ -1,0 +1,36 @@
+introduccion
+
+vamos a realizar una investigación utilizando el método de Regresión Lineal con un enfoque en aplicaciones útiles para la sociedad.
+
+Tema: Predicción del consumo de energía eléctrica en hogares
+
+Contexto:
+El consumo eficiente de energía eléctrica es un tema relevante para la sociedad, ya que puede ayudar a reducir el impacto ambiental,
+disminuir los costos energéticos y promover un uso más sostenible de los recursos. Comprender los factores que influyen en el consumo
+de electricidad en los hogares es clave para desarrollar estrategias de ahorro y eficiencia energética.
+
+Objetivo:
+Utilizar un modelo de Regresión Lineal para predecir el consumo de energía eléctrica en los hogares, 
+identificando las variables más influyentes.
+
+Datos:
+Vamos a utilizar un conjunto de datos públicos que contiene información sobre el consumo de energía eléctrica en hogares,
+así como características como el tamaño de la vivienda, el número de ocupantes, el tipo de electrodomésticos, etc.
+
+Pasos:
+
+Recopilar y limpiar los datos necesarios.
+Explorar y analizar las variables que pueden influir en el consumo de energía.
+Entrenar un modelo de Regresión Lineal utilizando Scikit-Learn.
+Evaluar el rendimiento del modelo y su capacidad predictiva.
+Identificar las variables más importantes que afectan el consumo de energía.
+Interpretar los resultados y discutir las implicaciones prácticas.
+Proponer recomendaciones y estrategias para mejorar la eficiencia energética en los hogares.
+Beneficios para la sociedad:
+
+Ayudar a los usuarios a comprender mejor sus patrones de consumo de energía y tomar medidas para reducir el gasto.
+Permitir a las empresas de servicios públicos y a los gobiernos desarrollar programas y políticas más efectivas para promover el ahorro de energía.
+Contribuir a la reducción del consumo de energía y las emisiones de gases de efecto invernadero, lo que beneficia al medioambiente.
+Generar ahorros económicos para los hogares al optimizar el uso de la energía eléctrica.
+¿Qué te parece esta propuesta de investigación basada en Regresión Lineal y enfocada en utilidades para la sociedad?
+
