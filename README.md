@@ -164,5 +164,30 @@ print(data.info())
 X = data.drop('consumo_electrico', axis=1)  # Todas las columnas excepto la de consumo eléctrico
 y = data['consumo_electrico']
 
+# Dividir los datos en conjuntos de entrenamiento y prueba
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Crear y entrenar el modelo de Regresión Lineal
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+# Hacer predicciones y evaluar el rendimiento
+y_pred = model.predict(X_test)
+r_squared = model.score(X_test, y_test)
+print(f"R-squared: {r_squared:.2f}")
+Veamos cómo funciona este algoritmo:
+
+Importamos las librerías necesarias: pandas para la manipulación de datos y sklearn.linear_model para el modelo de Regresión Lineal.
+
+Cargamos los datos desde un archivo CSV llamado consumo_electrico_familias.csv utilizando pd.read_csv().
+
+Exploramos los datos recién cargados para tener una idea general de su estructura y contenido.
+
+Separamos las variables independientes (X) y la variable dependiente (y) (en este caso, el consumo eléctrico).
+Utilizamos data.drop() para eliminar la columna de consumo eléctrico de X.
+
+Dividimos los datos en conjuntos de entrenamiento y prueba usando train_test_split() de Scikit-Learn.
+
 
 
