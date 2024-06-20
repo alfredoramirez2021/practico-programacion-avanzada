@@ -200,7 +200,9 @@ Este es un ejemplo básico, pero puedes ampliarlo y personalizarlo según tus re
 datos, selección de variables, evaluación de modelos, etc.
 
 data_loader.py: Este archivo manejará la carga y preprocesamiento de los datos.
+
 model.py: Este archivo definirá el modelo de predicción.
+
 main.py: Este archivo ejecutará el flujo principal del programa.
 
 
