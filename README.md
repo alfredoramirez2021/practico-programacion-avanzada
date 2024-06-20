@@ -112,8 +112,36 @@ data = np.genfromtxt('datos_consumo_energia.csv', delimiter=',')
 X = data[:, :-1]  # Todas las columnas excepto la última
 y = data[:, -1]   # Última columna (consumo de energía)
 Dividir los datos en conjuntos de entrenamiento y prueba:
-python
-Copiar
+
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 Entrenar el modelo de Regresión Lineal:
+
+model = LinearRegression()
+model.fit(X_train, y_train)
+Hacer predicciones y evaluar el rendimiento:
+
+
+
+# Hacer predicciones en el conjunto de prueba
+y_pred = model.predict(X_test)
+
+# Calcular el coeficiente de determinación (R-squared)
+r_squared = model.score(X_test, y_test)
+print(f"R-squared: {r_squared:.2f}")
+Visualizar los resultados:
+
+
+# Visualizar los datos y las predicciones
+plt.scatter(y_test, y_pred, label="Predicciones")
+plt.plot([min(y_test), max(y_test)], [min(y_test), max(y_test)], 'r--', label="Línea ideal")
+plt.xlabel("Consumo de energía real")
+plt.ylabel("Consumo de energía predicho")
+plt.title("Regresión Lineal: Predicción del consumo de energía")
+plt.legend()
+plt.show()
+Este es un ejemplo básico de cómo utilizar Scikit-Learn para generar un modelo de Regresión Lineal para predecir el consumo de energía eléctrica en hogares.
+
+Algunas extensiones y mejoras que podrías considerar:
+
+
