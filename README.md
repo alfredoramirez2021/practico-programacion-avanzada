@@ -93,18 +93,15 @@ Ayudar a los usuarios a comprender mejor sus patrones de consumo de energía y t
 Permitir a las empresas de servicios públicos y a los gobiernos desarrollar programas y políticas más efectivas para promover el ahorro de energía.
 Contribuir a la reducción del consumo de energía y las emisiones de gases de efecto invernadero, lo que beneficia al medioambiente.
 Generar ahorros económicos para los hogares al optimizar el uso de la energía eléctrica.
-¿Qué te parece esta propuesta de investigación basada en Regresión Lineal y enfocada en utilidades para la sociedad?
 
 segundo paso generar los algoritmos necesarios para continuar con el proyecto
-
 
 Importar las librerías necesarias:
 import numpy as np
 from sklearn.linear_model import LinearRegression
 import matplotlib.pyplot as plt
 Cargar y preparar los datos:
-python
-Copiar
+
 # Cargar los datos desde un archivo CSV
 data = np.genfromtxt('datos_consumo_energia.csv', delimiter=',')
 
