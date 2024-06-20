@@ -205,4 +205,11 @@ model.py: Este archivo definirá el modelo de predicción.
 
 main.py: Este archivo ejecutará el flujo principal del programa.
 
+mi_proyecto/
+│
+├── data_loader.py
+├── model.py
+└── main.py
+
+
 
