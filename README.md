@@ -199,4 +199,8 @@ los datos de entrenamiento y prueba según tus necesidades.
 Este es un ejemplo básico, pero puedes ampliarlo y personalizarlo según tus requisitos específicos, como agregar más preprocesamiento de 
 datos, selección de variables, evaluación de modelos, etc.
 
+data_loader.py: Este archivo manejará la carga y preprocesamiento de los datos.
+model.py: Este archivo definirá el modelo de predicción.
+main.py: Este archivo ejecutará el flujo principal del programa.
+
 
