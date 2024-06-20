@@ -140,5 +140,29 @@ plt.show()
 Este es un ejemplo básico de cómo utilizar Scikit-Learn para generar un modelo de Regresión Lineal para predecir el consumo de energía eléctrica en hogares.
 
 Algunas extensiones y mejoras que podrías considerar:
+Explorar y seleccionar las variables independientes más relevantes.
+Probar diferentes técnicas de preprocesamiento de los datos (normalización, codificación de variables categóricas, etc.).
+Evaluar otros métricas de rendimiento, como el error cuadrático medio (MSE) o el error absoluto medio (MAE).
+Realizar análisis de residuos para verificar los supuestos de la Regresión Lineal.
+Explorar la posibilidad de utilizar modelos más avanzados, como Regresión Lineal Regularizada o Árboles de Decisión, y compararlos con el modelo de Regresión Lineal.
+
+en Argentina, el Instituto Nacional de Estadística y Censos (INDEC) tiene información relacionada con el consumo de energía eléctrica en los hogares
+: https://www.indec.gob.ar/indec/web/Nivel4-Tema-3-8-58
+De acuerdo, vamos a generar un algoritmo en Python para cargar datos de consumo eléctrico de familias utilizando Scikit-Learn. Aquí te presento un ejemplo:
+
+import pandas as pd
+from sklearn.linear_model import LinearRegression
+
+# Cargar los datos desde un archivo CSV
+data = pd.read_csv('consumo_electrico_familias.csv')
+
+# Explorar los datos
+print(data.head())
+print(data.info())
+
+# Separar las variables independientes (X) y la variable dependiente (y)
+X = data.drop('consumo_electrico', axis=1)  # Todas las columnas excepto la de consumo eléctrico
+y = data['consumo_electrico']
+
 
 
