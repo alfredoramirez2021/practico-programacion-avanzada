@@ -1,215 +1,131 @@
-# practico-programacion-avanzada
+Introducción
+
+En la gestión de residuos urbanos, la predicción precisa de las cantidades recuperadas es crucial para la planificación eficiente y sostenible. En este contexto, el algoritmo de regresión lineal se presenta como una herramienta poderosa para analizar y predecir las toneladas de residuos recuperados en distintos centros de reciclaje y compostaje de la ciudad. Este ensayo justifica la aplicación de este algoritmo, destacando su relevancia, precisión y contribución a la gestión ambiental.
+Relevancia del Algoritmo de Regresión Lineal
+
+La regresión lineal es un método estadístico que modela la relación entre una variable dependiente y una o más variables independientes. En el caso de la gestión de residuos, la variable dependiente podría ser las toneladas recuperadas en centros verdes de la ciudad, mientras que las variables independientes podrían incluir las toneladas procesadas en centros de reciclaje y compostaje.
+
+Aplicar un algoritmo de regresión lineal en este contexto es relevante por varias razones:
+
+    Simplicidad y Eficacia: La regresión lineal es fácil de implementar y entender, lo que la convierte en una herramienta accesible para los gestores de residuos. Su eficacia en la identificación de relaciones lineales en los datos permite generar predicciones precisas.
+    Identificación de Tendencias: Este algoritmo ayuda a identificar tendencias y patrones en los datos históricos, proporcionando una base sólida para la toma de decisiones futuras.
+    Optimización de Recursos: Con predicciones precisas, es posible optimizar la asignación de recursos, mejorando la eficiencia operativa y reduciendo costos.
+
+Precisión en la Predicción
+
+La precisión es un aspecto fundamental en la gestión de residuos. Las predicciones inexactas pueden llevar a la sobrecarga de los centros de procesamiento o a la subutilización de la capacidad instalada. La regresión lineal, al modelar la relación entre variables clave, ofrece una alta precisión en las predicciones debido a las siguientes razones:
+
+    Análisis de Datos Históricos: Utiliza datos históricos para entrenar el modelo, lo que permite captar las dinámicas reales de la recuperación de residuos.
+    Coeficientes Ajustados: Los coeficientes obtenidos a partir de la regresión reflejan el impacto de cada variable independiente en la variable dependiente, permitiendo ajustes finos en las predicciones.
+    Validación y Ajuste del Modelo: El algoritmo permite validar y ajustar el modelo continuamente, mejorando su precisión con el tiempo a medida que se dispone de más datos.
+
+Contribución a la Gestión Ambiental
+
+El uso del algoritmo de regresión lineal no solo mejora la eficiencia operativa sino que también tiene un impacto positivo en la gestión ambiental:
+
+    Reducción de Residuos en Vertederos: Predicciones precisas facilitan la planificación y operación de los centros de reciclaje y compostaje, reduciendo la cantidad de residuos que terminan en vertederos.
+    Mejora en el Reciclaje y Compostaje: Al conocer de antemano las cantidades de residuos, los centros pueden preparar mejor sus operaciones, aumentando las tasas de reciclaje y compostaje.
+    Sostenibilidad: Una gestión más eficiente de los residuos contribuye a la sostenibilidad urbana, reduciendo la huella de carbono y promoviendo prácticas más ecológicas.
+
+Implementación Práctica
+
+La implementación del algoritmo de regresión lineal en la gestión de residuos implica varios pasos, que incluyen la carga de datos, el procesamiento y el entrenamiento del modelo, así como la visualización y validación de los resultados. Dividir el proceso en módulos y utilizar un enfoque orientado a objetos mejora la modularidad y reutilización del código, facilitando su mantenimiento y actualización.
+
+Por ejemplo, en un proyecto práctico, los datos se cargan desde un archivo Excel y se procesan para identificar las variables clave. El modelo de regresión se entrena utilizando estos datos, y se realizan predicciones sobre futuras cantidades de residuos recuperados. La visualización de los resultados permite verificar la precisión del modelo y ajustar los parámetros según sea necesario.
+Conclusión
+
+La aplicación del algoritmo de regresión lineal en la predicción de toneladas recuperadas en centros de reciclaje y compostaje es una herramienta valiosa para la gestión de residuos. Su relevancia, precisión y contribución a la sostenibilidad ambiental justifican su uso en este contexto. A través de predicciones precisas y análisis de datos históricos, los gestores de residuos pueden optimizar recursos, reducir costos y mejorar la eficiencia operativa, contribuyendo así a un manejo más sostenible de los residuos urbanos.
 
 
-Scikit-Learn es una de las librerías de aprendizaje automático más populares en Python. Permite a los desarrolladores y científicos de datos implementar una amplia gama de algoritmos de machine learning de una manera sencilla y eficiente.
+archivos utilizados
 
-Uno de los temas que puedo cubrir en detalle es la Regresión Lineal, que es uno de los algoritmos de aprendizaje supervisado más utilizados en Scikit-Learn.
+data_loading.py: Este archivo se encargará de la carga de datos.
+data_processing.py: Este archivo se encargará del procesamiento y cálculos necesarios.
+main.py: Este archivo ejecutará la regresión lineal y generará las visualizaciones.
 
-La Regresión Lineal es un modelo que intenta encontrar la mejor línea recta que se ajusta a un conjunto de datos. Esta línea recta se utiliza para predecir valores de una variable dependiente a partir de una o más variables independientes.
-
-Vamos a desarrollar un ejemplo paso a paso:
-
-Importar las librerías necesarias:
-
-import numpy as np
-from sklearn.linear_model import LinearRegression
-import matplotlib.pyplot as plt
-Generar datos de ejemplo:
-Generar datos aleatorios
-
-X = np.random.rand(100, 1)
-y = 2 * X + 3 + np.random.normal(0, 0.5, (100, 1))
-En este ejemplo, generamos 100 valores aleatorios para la variable independiente X, y luego calculamos la variable dependiente y usando la ecuación
-𝑦 = 2𝑋 + 3
-y=2X+3 con un pequeño ruido aleatorio.
-
-Entrenar el modelo de Regresión Lineal:
-Crear y entrenar el modelo
-
-model = LinearRegression()
-model.fit(X, y)
-Aquí creamos una instancia del modelo de Regresión Lineal y lo entrenamos con los datos X y y.
-
-Hacer predicciones:
-Hacer predicciones
-
-y_pred = model.predict(X)
-Utilizamos el modelo entrenado para hacer predicciones sobre los mismos datos de entrada X.
-
-Evaluar el rendimiento del modelo:
-Calcular el coeficiente de determinación (R-squared)
-
-r_squared = model.score(X, y)
-print(f"R-squared: {r_squared:.2f}")
-
-Calculamos el coeficiente de determinación (R-squared) para evaluar qué tan bien se ajusta el modelo a los datos.
-
-Visualizar los resultados:
-Visualizar los datos y la línea de regresión
-
-plt.scatter(X, y, label="Datos reales")
-plt.plot(X, y_pred, color="red", label="Predicciones")
-plt.xlabel("Variable independiente (X)")
-plt.ylabel("Variable dependiente (y)")
-plt.title("Regresión Lineal")
-plt.legend()
-plt.show()
-
-Finalmente, graficamos los datos reales y las predicciones del modelo para visualizar los resultados.
-
-Este es un ejemplo básico de cómo utilizar la Regresión Lineal con Scikit-Learn.
-
-introduccion
-
-vamos a realizar una investigación utilizando el método de Regresión Lineal con un enfoque en aplicaciones útiles para la sociedad.
-
-Tema: Predicción del consumo de energía eléctrica en hogares
-
-Contexto:
-El consumo eficiente de energía eléctrica es un tema relevante para la sociedad, ya que puede ayudar a reducir el impacto ambiental,
-disminuir los costos energéticos y promover un uso más sostenible de los recursos. Comprender los factores que influyen en el consumo
-de electricidad en los hogares es clave para desarrollar estrategias de ahorro y eficiencia energética.
-
-Objetivo:
-Utilizar un modelo de Regresión Lineal para predecir el consumo de energía eléctrica en los hogares, 
-identificando las variables más influyentes.
-
-Datos:
-Vamos a utilizar un conjunto de datos públicos que contiene información sobre el consumo de energía eléctrica en hogares,
-así como características como el tamaño de la vivienda, el número de ocupantes, el tipo de electrodomésticos, etc.
-
-Pasos:
-
-Recopilar y limpiar los datos necesarios.
-Explorar y analizar las variables que pueden influir en el consumo de energía.
-Entrenar un modelo de Regresión Lineal utilizando Scikit-Learn.
-Evaluar el rendimiento del modelo y su capacidad predictiva.
-Identificar las variables más importantes que afectan el consumo de energía.
-Interpretar los resultados y discutir las implicaciones prácticas.
-Proponer recomendaciones y estrategias para mejorar la eficiencia energética en los hogares.
-Beneficios para la sociedad:
-
-Ayudar a los usuarios a comprender mejor sus patrones de consumo de energía y tomar medidas para reducir el gasto.
-Permitir a las empresas de servicios públicos y a los gobiernos desarrollar programas y políticas más efectivas para promover el ahorro de energía.
-Contribuir a la reducción del consumo de energía y las emisiones de gases de efecto invernadero, lo que beneficia al medioambiente.
-Generar ahorros económicos para los hogares al optimizar el uso de la energía eléctrica.
-
-segundo paso generar los algoritmos necesarios para continuar con el proyecto
-
-Importar las librerías necesarias:
-import numpy as np
-from sklearn.linear_model import LinearRegression
-import matplotlib.pyplot as plt
-Cargar y preparar los datos:
-
-# Cargar los datos desde un archivo CSV
-data = np.genfromtxt('datos_consumo_energia.csv', delimiter=',')
-
-# Separar las variables independientes (X) y la variable dependiente (y)
-X = data[:, :-1]  # Todas las columnas excepto la última
-y = data[:, -1]   # Última columna (consumo de energía)
-Dividir los datos en conjuntos de entrenamiento y prueba:
-
-from sklearn.model_selection import train_test_split
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-Entrenar el modelo de Regresión Lineal:
-
-model = LinearRegression()
-model.fit(X_train, y_train)
-Hacer predicciones y evaluar el rendimiento:
-
-
-
-# Hacer predicciones en el conjunto de prueba
-y_pred = model.predict(X_test)
-
-# Calcular el coeficiente de determinación (R-squared)
-r_squared = model.score(X_test, y_test)
-print(f"R-squared: {r_squared:.2f}")
-Visualizar los resultados:
-
-
-# Visualizar los datos y las predicciones
-plt.scatter(y_test, y_pred, label="Predicciones")
-plt.plot([min(y_test), max(y_test)], [min(y_test), max(y_test)], 'r--', label="Línea ideal")
-plt.xlabel("Consumo de energía real")
-plt.ylabel("Consumo de energía predicho")
-plt.title("Regresión Lineal: Predicción del consumo de energía")
-plt.legend()
-plt.show()
-Este es un ejemplo básico de cómo utilizar Scikit-Learn para generar un modelo de Regresión Lineal para predecir el consumo de energía eléctrica en hogares.
-
-Algunas extensiones y mejoras que podrías considerar:
-Explorar y seleccionar las variables independientes más relevantes.
-Probar diferentes técnicas de preprocesamiento de los datos (normalización, codificación de variables categóricas, etc.).
-Evaluar otros métricas de rendimiento, como el error cuadrático medio (MSE) o el error absoluto medio (MAE).
-Realizar análisis de residuos para verificar los supuestos de la Regresión Lineal.
-Explorar la posibilidad de utilizar modelos más avanzados, como Regresión Lineal Regularizada o Árboles de Decisión, y compararlos con el modelo de Regresión Lineal.
-
-en Argentina, el Instituto Nacional de Estadística y Censos (INDEC) tiene información relacionada con el consumo de energía eléctrica en los hogares
-: https://www.indec.gob.ar/indec/web/Nivel4-Tema-3-8-58
-De acuerdo, vamos a generar un algoritmo en Python para cargar datos de consumo eléctrico de familias utilizando Scikit-Learn. Aquí te presento un ejemplo:
+1.Archivo data_loading.py
 
 import pandas as pd
+
+def load_data(file_path):
+    return pd.read_excel(file_path)
+
+2. Archivo data_processing.py
+
+ import numpy as np
 from sklearn.linear_model import LinearRegression
 
-# Cargar los datos desde un archivo CSV
-data = pd.read_csv('consumo_electrico_familias.csv')
+def process_data(recuperado):
+    x = recuperado[["Centro de Reciclaje de la Ciudad + Centros de Compostaje"]]
+    y = recuperado[["Centros Verdes de la Ciudad"]]
+    return x, y
 
-# Explorar los datos
-print(data.head())
-print(data.info())
+def calculate_manual_coefficients(matriz):
+    n = len(matriz)
+    suma_de_x = np.sum(matriz[:, 1])
+    suma_de_y = np.sum(matriz[:, 2])
+    suma_de_producto = np.sum(matriz[:, 1] * matriz[:, 2])
+    suma_de_cuadrado_x = np.sum(matriz[:, 1] * matriz[:, 1])
+    
+    b1 = (n * suma_de_producto - suma_de_x * suma_de_y) / (n * suma_de_cuadrado_x - suma_de_x * suma_de_x)
+    b0 = (suma_de_y - b1 * suma_de_x) / n
+    
+    return b0, b1
 
-# Separar las variables independientes (X) y la variable dependiente (y)
-X = data.drop('consumo_electrico', axis=1)  # Todas las columnas excepto la de consumo eléctrico
-y = data['consumo_electrico']
+def train_model(x, y):
+    clf = LinearRegression()
+    clf.fit(x, y)
+    return clf
+    
+3. Archivo main.py
 
-# Dividir los datos en conjuntos de entrenamiento y prueba
-from sklearn.model_selection import train_test_split
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+import matplotlib.pyplot as plt
+from data_loading import load_data
+from data_processing import process_data, calculate_manual_coefficients, train_model
 
-# Crear y entrenar el modelo de Regresión Lineal
-model = LinearRegression()
-model.fit(X_train, y_train)
+# Cargar los datos
+recuperado = load_data("/content/toneladas_recuperadas_2022-1_ok.xlsx")
 
-# Hacer predicciones y evaluar el rendimiento
-y_pred = model.predict(X_test)
-r_squared = model.score(X_test, y_test)
-print(f"R-squared: {r_squared:.2f}")
-Veamos cómo funciona este algoritmo:
+# Procesar los datos
+x, y = process_data(recuperado)
 
-Importamos las librerías necesarias: pandas para la manipulación de datos y sklearn.linear_model para el modelo de Regresión Lineal.
+# Visualización inicial de los datos
+plt.scatter(x, y)
+plt.xlabel("Centro de Reciclaje de la Ciudad + Centros de Compostaje")
+plt.ylabel("Centros Verdes de la Ciudad")
+plt.grid()
+plt.show()
 
-Cargamos los datos desde un archivo CSV llamado consumo_electrico_familias.csv utilizando pd.read_csv().
+# Convertir el DataFrame a una matriz numpy
+matriz = recuperado.to_numpy()
 
-Exploramos los datos recién cargados para tener una idea general de su estructura y contenido.
+# Calcular los coeficientes manualmente
+b0, b1 = calculate_manual_coefficients(matriz)
+print("Coeficiente b0 (manual):", b0)
+print("Coeficiente b1 (manual):", b1)
 
-Separamos las variables independientes (X) y la variable dependiente (y) (en este caso, el consumo eléctrico).
-Utilizamos data.drop() para eliminar la columna de consumo eléctrico de X.
+# Entrenar el modelo de regresión lineal
+clf = train_model(x, y)
+print("Coeficiente (sklearn):", clf.coef_)
+print("Intercepto (sklearn):", clf.intercept_)
 
-Dividimos los datos en conjuntos de entrenamiento y prueba usando train_test_split() de Scikit-Learn.
+# Predicción de un nuevo valor
+prediccion = clf.predict([[62554.42]])
+print("Predicción para 62554.42:", prediccion)
 
-Creamos una instancia del modelo de Regresión Lineal y lo entrenamos con los datos de entrenamiento utilizando model.fit().
+# Visualización de la regresión lineal ajustada
+plt.scatter(x, y)
+plt.plot(x, clf.predict(x), color='red')
+plt.title("Regresión Lineal")
+plt.xlabel("Centro de Reciclaje de la Ciudad + Centros de Compostaje")
+plt.ylabel("Centros Verdes de la Ciudad")
+plt.legend(["Predicciones", "Datos"])
+plt.grid()
+plt.show()
 
-Hacemos predicciones sobre el conjunto de prueba y calculamos el coeficiente de determinación (R-squared) para evaluar el rendimiento del modelo.
+# Ecuación final de la regresión
+print(f"Ecuación de la regresión: y = {clf.intercept_[0]} + {clf.coef_[0][0]}x")
 
-Asegúrate de reemplazar 'consumo_electrico_familias.csv' con la ruta y el nombre de tu archivo de datos. También puedes ajustar la división de 
-los datos de entrenamiento y prueba según tus necesidades.
-
-Este es un ejemplo básico, pero puedes ampliarlo y personalizarlo según tus requisitos específicos, como agregar más preprocesamiento de 
-datos, selección de variables, evaluación de modelos, etc.
-
-data_loader.py: Este archivo manejará la carga y preprocesamiento de los datos.
-
-model.py: Este archivo definirá el modelo de predicción.
-
-main.py: Este archivo ejecutará el flujo principal del programa.
-
-mi_proyecto/
-│
-├── data_loader.py
-├── model.py
-└── main.py
 
 
 
