@@ -40,8 +40,14 @@ La aplicación del algoritmo de regresión lineal en la predicción de toneladas
 archivos utilizados
 
 data_loading.py: Este archivo se encargará de la carga de datos.
+
+
 data_processing.py: Este archivo se encargará del procesamiento y cálculos necesarios.
+
+
 main.py: Este archivo ejecutará la regresión lineal y generará las visualizaciones.
+
+
 
 1.Archivo data_loading.py
 
